@@ -1,9 +1,6 @@
-import { DbListFood } from "./helpers/DbListFood";
+import { DbListFood } from "../database/helpers/DbListFood";
 
 class ListFoodController {
-  constructor() {
-    DbListFood;
-  }
   async list(req, res) {
     try {
       const { food } = req.params;
