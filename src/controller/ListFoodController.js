@@ -1,22 +1,21 @@
-import { dailyNutri } from "../database/connection";
+import { DbListFood } from "./helpers/DbListFood";
+
 class ListFoodController {
+  constructor() {
+    DbListFood;
+  }
   async list(req, res) {
     try {
       const { food } = req.params;
-      console.log(food);
-      const query = await dailyNutri("food").where(
-        "description",
-        "ilike",
-        `%${food}%`
-      );
-      if (query === "") {
-        throw new {
-          error: 404,
-          message: "FOOD_NOT_FOUND",
-        }();
+      const query = await DbListFood(food);
+
+      if (query == "") {
+        return res.status(404).json({
+          message: "erro",
+        });
       }
 
-      return res.json(query);
+      return res.status(200).json(query);
     } catch (err) {
       console.log(err);
     }
