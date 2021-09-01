@@ -1,0 +1,24 @@
+{
+  "name": "dailynutri",
+  "version": "1.0.0",
+  "description": "App based in NodeJs with Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lekofox/Dailynutri.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lekofox/Dailynutri/issues"
+  },
+  "homepage": "https://github.com/lekofox/Dailynutri#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
