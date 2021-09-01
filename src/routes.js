@@ -1,5 +1,5 @@
 import { Router } from "express";
-
+import ListFoodController from "./controller/ListFoodController";
 const routes = new Router();
 
 routes.get("/", (req, res) => {
@@ -8,4 +8,5 @@ routes.get("/", (req, res) => {
   });
 });
 
+routes.get("/listfood/:food", ListFoodController.list);
 export default routes;
